@@ -19,3 +19,5 @@ nodes:
   - containerPort: 443
     hostPort: 443
     protocol: TCP
+    nodeSelector:
+        kubernetes.io/os: linux

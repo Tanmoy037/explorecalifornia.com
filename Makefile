@@ -3,7 +3,7 @@
 
 
 run_website:
-	docker build -t exploreclifornia.com . && \
+	docker build -t explorecalifornia.com . && \
 		docker run --rm --name exploreclifornia.com -p 5000:80 -d exploreclifornia.com
 
 stop_website:
