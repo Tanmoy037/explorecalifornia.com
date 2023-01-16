@@ -1,5 +1,5 @@
 .PHONY: run_website stop_website install_kind create_kind_cluster \
-	delete_kind_cluster delete_docker_registry
+	delete_kind_cluster delete_docker_registry install_app
 
 
 run_website:
@@ -40,6 +40,9 @@ delete_kind_cluster: delete_docker_registry
 
 delete_docker_registry:
 	docker stop local-registry && docker rm local-registry
+
+install_app:
+	helm upgrade --atomic --install explorecalifornia.com ./chart
 
 
 
